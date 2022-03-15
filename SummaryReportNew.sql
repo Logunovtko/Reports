@@ -9,7 +9,7 @@ sum(rv) as zakazvolume,
 sum(ersc) as vivoz,
 sum(tiv) as vivozvolume,
 sum(ervv) as factvolume,			   
-DENSE_RANK() OVER ( order by  address)  AS num 
+DENSE_RANK() OVER ( order by  address)  AS num, DENSE_TEST
 			   from
 (select distinct s.address as address,
 se.name,
